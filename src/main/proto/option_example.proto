@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package example.options;
+
+//Set options: Allows to force the package name of generate java from proto
+option java_package = "com.example.options";
+// When More Messages are defined in same proto, it creates multiple class files
+option java_multiple_files = true;
+
+message OptionMessageTest {
+    int32 id = 1;
+    bool is_simple = 2;
+    string name = 3;
+    repeated int32 sample_list = 4;
+}
+
+message OptionMessageOther {
+    string hello = 1;
+}
